@@ -101,14 +101,14 @@ const VehicleForm = ({ onClose }) => {
       errors.VehicleImage = 'Vehicle image is required';
     }
 
-    if (vehicleDetails.Mileage && isNaN(vehicleDetails.Mileage)) {
+    if (vehicleDetails.VehicleMileageRange && isNaN(vehicleDetails.VehicleMileageRange)) {
       formIsValid = false;
-      errors.Mileage = 'Mileage must be a number';
+      errors.VehicleMileageRange = 'Mileage must be a number';
     }
 
-    if (vehicleDetails.YearOfManufacturing && (isNaN(vehicleDetails.YearOfManufacturing) || vehicleDetails.YearOfManufacturing.length !== 4)) {
+    if (vehicleDetails.VehicleManufacturedYear && (isNaN(vehicleDetails.VehicleManufacturedYear) || vehicleDetails.VehicleManufacturedYear.length !== 4)) {
       formIsValid = false;
-      errors.YearOfManufacturing = 'Year of Manufacture must be a 4-digit number';
+      errors.VehicleManufacturedYear = 'Year of Manufacture must be a 4-digit number';
     }
 
     setErrors(errors);
